@@ -8,8 +8,8 @@ uri = "https://adsmagnify-reporting.onrender.com/check-email"
 
 while True:
     date = str(datetime.datetime.now())
-    time = date.split(" ")
-    minute = time[1].split(":")[1]
+    time1 = date.split(" ")
+    minute = time1[1].split(":")[1]
     
     if(float(minute) % 10 == 0 and counter == 1) :
         counter = 0
