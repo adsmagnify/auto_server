@@ -1,5 +1,6 @@
 import datetime
 import requests
+import time
 
 email = "test"
 counter = 1
@@ -14,6 +15,7 @@ while True:
         counter = 0
         print("hi")
         requests.post(uri, json={'email': email}, headers={'Content-Type': 'application/json'})
+        time.sleep(480)
 
     elif(float(minute) % 10 != 0):
         counter = 1
