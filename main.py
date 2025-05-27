@@ -11,12 +11,16 @@ while True:
     time1 = date.split(" ")
     minute = time1[1].split(":")[1]
     
-    if(float(minute) % 10 == 0 and counter == 1) :
+    if(float(minute) % 12 == 0 and counter == 1) :
         counter = 0
-        print("hi")
+        print("Sending Request to server - ",  date)
         requests.post(uri, json={'email': email}, headers={'Content-Type': 'application/json'})
-        time.sleep(480)
+        print("Going to sleep now")
+        print(" ")
+        time.sleep(690)
 
-    elif(float(minute) % 10 != 0):
+    elif(float(minute) % 12 != 0):
         counter = 1
+        # print("elif triggered")
+        # print(" ")
     
