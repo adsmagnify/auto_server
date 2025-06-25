@@ -2,8 +2,8 @@ name: Email Cron Job
 
 on:
   schedule:
-    - cron: "*/12 * * * *"  # Every 12 minutes
-  workflow_dispatch:        # Optional: lets you run manually
+    - cron: "*/12 * * * *"  # every 12 minutes
+  workflow_dispatch:        # allows manual trigger
 
 jobs:
   run-script:
@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.10
+          python-version: "3.10"  # 🔧 this is the fix
 
       - name: Install dependencies
         run: pip install requests
