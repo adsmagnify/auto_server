@@ -22,3 +22,7 @@ jobs:
 
       - name: Run Python script
         run: python check_email.py
+
+concurrency:
+  group: "email-cron"
+  cancel-in-progress: true
